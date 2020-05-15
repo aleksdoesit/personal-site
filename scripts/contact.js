@@ -12,8 +12,15 @@ window.addEventListener("DOMContentLoaded", function() {
     function success() {
         form.reset();
         status.innerHTML = "Thanks!";
-        $('#contactForm').prepend(`<div class='emailSent'><p>Your message successfully submitted. Thank you, I will get back to you soon!</p><button id='closePopup' onClick='removeDummy()'><i class="fas fa-times"></i></button></div>`)
+        $('#contactForm').prepend(`<div class='emailSent'><p>Your message successfully submitted. Thank you, I will get back to you soon!</p><button id='closePopup'><i class="fas fa-times"></i></button></div>`)
+
+        $('#closePopup').click(function() {
+            console.log('clicked!');
+            $('.emailSent').remove()
+        })
     }
+
+
 
     function error() {
         status.innerHTML = "Oops! There was a problem.";
@@ -46,9 +53,3 @@ function ajax(method, url, data, success, error) {
 }
 
 // Close successful message popup
-
-function removeDummy() {
-    var elem = document.getElementById('closePopup');
-    remove(elem);
-    return false;
-}
