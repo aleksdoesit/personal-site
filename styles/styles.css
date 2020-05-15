@@ -661,8 +661,28 @@ header footer p {
   margin-right: auto;
 }
 
-button,
-.formSubmit {
+.wrapper .contact .contactContainer .emailSent {
+  width: 100%;
+  border-radius: 30px;
+  color: #3e774b;
+  background-color: #d4edda;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+}
+
+.wrapper .contact .contactContainer .emailSent p {
+  margin: 0;
+}
+
+.wrapper .contact .contactContainer .emailSent button {
+  cursor: pointer;
+  color: #3e774b;
+  border: none;
+  background: none;
+  padding: 5px;
+}
+
+button {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   background-color: #FF4C60;
@@ -673,8 +693,7 @@ button,
   border: none;
 }
 
-button:hover,
-.formSubmit:hover {
+button:hover {
   -webkit-animation: pulse;
           animation: pulse;
   -webkit-animation-duration: 1s;

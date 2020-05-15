@@ -262,7 +262,7 @@
     // Styles for Contact Section
     .contact {
         margin-bottom: 80px;
-        
+
         .contactContainer{
             display: flex;
 
@@ -313,14 +313,34 @@
                     }
                 }
             }
+
+            .emailSent {
+                width: 100%;
+                border-radius: 30px;
+                color: #3e774b;
+                background-color: #d4edda;
+                margin-bottom: 20px;
+                                    padding: 20px 30px;
+
+                p {
+                    margin: 0;
+                }
+
+                button {
+                    cursor: pointer;
+                    color: #3e774b;
+                    border: none;
+                    background: none;
+                    padding: 5px
+                }
+            }
         }
 
     }
 }
 
 // General Stylings
-button,
-.formSubmit {
+button {
     font-family: $fontFamily;
     font-weight: 500;
     background-color: $colourPink;
