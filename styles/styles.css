@@ -519,6 +519,8 @@ header footer p {
   bottom: 20px;
   left: 20px;
   opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .wrapper .portfolio .portfolioCarousel .portfolioItem .portfolioImage {
@@ -560,7 +562,7 @@ header footer p {
 }
 
 .wrapper .toolkit .toolkitWrapper {
-  width: 70%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,7 +579,7 @@ header footer p {
 }
 
 .wrapper .toolkit .toolkitWrapper div {
-  width: 25%;
+  width: 20%;
   text-align: center;
   padding: 25px;
 }
@@ -595,7 +597,72 @@ header footer p {
   opacity: 0.6;
 }
 
-button {
+.wrapper .contact {
+  margin-bottom: 80px;
+}
+
+.wrapper .contact .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .contact .contactContainer .emailMe {
+  background-image: url("../assets/map.svg");
+  width: calc(33% - 30px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 30px;
+}
+
+.wrapper .contact .contactContainer .emailMe h4 {
+  font-size: 1.4rem;
+  margin: 15px 0;
+}
+
+.wrapper .contact .contactContainer .emailMe p {
+  font-size: 0.9rem;
+}
+
+.wrapper .contact .contactContainer .emailMe a {
+  text-decoration: none;
+  color: #FF4C60;
+}
+
+.wrapper .contact .contactContainer div:last-of-type {
+  width: 66%;
+}
+
+.wrapper .contact .contactContainer div:last-of-type .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .contact .contactContainer div:last-of-type .contactForm div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .contact .contactContainer div:last-of-type .contactForm div input {
+  width: 48%;
+}
+
+.wrapper .contact .contactContainer div:last-of-type .contactForm .formSubmit {
+  margin-right: auto;
+}
+
+button,
+.formSubmit {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   background-color: #FF4C60;
@@ -606,22 +673,54 @@ button {
   border: none;
 }
 
-button:hover {
+button:hover,
+.formSubmit:hover {
   -webkit-animation: pulse;
           animation: pulse;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
 
+input,
+textarea {
+  border-radius: 30px;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
+          box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.3;
+}
+
 .sectionContainer {
   color: #353353;
   padding-top: 100px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .sectionTitle {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 60px;
   position: relative;
 }
@@ -732,6 +831,12 @@ button:hover {
   color: #FF4C60 !important;
   top: 55% !important;
   left: 85% !important;
+}
+
+.parallaxBackground .i12 {
+  color: #c16e99;
+  top: 40% !important;
+  left: 30% !important;
 }
 
 html {
