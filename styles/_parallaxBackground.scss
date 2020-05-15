@@ -1,0 +1,75 @@
+// Styling for the scrolling background used in conjunction with the parallax script library
+
+.parallaxBackground {
+    position: absolute;
+    top: 0;
+    left: 290px;
+    width: calc(100vw - 290px);
+    height: 100%;
+
+    .i1 {
+        color: #44d7b6 !important;
+        display: inline-block !important;
+        top: 25% !important;
+        left: 20% !important;
+    }
+
+    .i2 {
+        color: #264de4 !important;
+        top: 85% !important;
+        left: 85% !important;
+    }
+
+    .i3 {
+        color: #6c6ce5 !important;
+        top: 85% !important;
+        left: 15% !important;
+    }
+
+    .i4 {
+        color: #E44D26 !important;
+        top: 10% !important;
+        left: 80% !important;
+    }
+
+    .i5 {
+        color: #F0DB4F !important;
+        top: 80% !important;
+        left: 40% !important;
+    }
+
+    .i6 {
+        top: 35% !important;
+        left: 75% !important;
+    }
+
+    .i7 {
+        color: #a3aaae !important;
+        top: 10% !important;
+        left: 50% !important;
+    }
+
+    .i8 {
+        color: #61DBFB !important;
+        top: 10% !important;
+        left: 10% !important;
+    }
+
+    .i9 {
+        color: #61DBFB !important;
+        top: 60% !important;
+        left: 15% !important;
+    }
+
+    .i10 {
+        color: #28a745 !important;
+        top: 60% !important;
+        left: 70% !important;
+    }
+
+    .i11 {
+        color: $colourPink !important;
+        top: 55% !important;
+        left: 85% !important;
+    }
+}

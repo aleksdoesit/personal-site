@@ -1,0 +1,12 @@
+$fontFamily: 'Rubik', sans-serif;
+
+$backgroundDark: #353353;
+$colourYellow: #FFD15C;
+$colourPink: #FF4C60;
+$colourBlue: #6C6CE5;
+
+@mixin transition($second) {
+    -webkit-transition: all $second ease-in-out;
+    -moz-transition: all $second ease-in-out;
+    transition: all $second ease-in-out;
+}
