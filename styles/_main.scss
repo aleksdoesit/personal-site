@@ -1,7 +1,113 @@
+// ----------> GENERAL STYLES <------------ \\
+
+button {
+    font-family: $fontFamily;
+    font-weight: 500;
+    background-color: $colourPink;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 12px 28px;
+    border: none;
+
+    &:hover {
+        animation: pulse;
+        animation-duration: 1s;
+    }
+}
+
+input,
+textarea {
+    border-radius: 20px;
+    border: none;
+    font-family: $fontFamily;
+    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
+    padding: 20px 30px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+        opacity: 0.3;
+    }
+}
+
+.sectionContainer {
+    color: $backgroundDark;
+    padding-top: 100px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.sectionTitle {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.sectionTitle:before {
+    content: "";
+    background-image: url(../assets/dots-bg.svg);
+    display: block;
+    height: 37px;
+    left: -14px;
+    top: -14px;
+    position: absolute;
+    width: 37px;
+}
+
+.chatBox {
+    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
+    position: relative;
+    border-radius: 20px;
+}
+
+.chatBox:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #FFF;
+    position: absolute;
+    left: -15px;
+    top: 20%;
+}
+
+.spacingElement {
+    display: block;
+}
+
+// Scroll to top of webpage button
+.scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    border-radius: 100%;
+    padding: 10px 12px;
+    z-index: 2;
+    opacity: 0.4;
+    filter: grayscale(1);
+    @include transition(.3s);
+
+    &:hover {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+}
+
+// Morphext stylings for the landing page
+.morphext>.animated {
+    display: inline-block;
+}
+
+// Wrapper for all elements
 .wrapper {
     margin-left: 290px;
     height: 100vh;
     background-color: $backgroundDark;
+
+    // ----------> SECTION STYLES <------------ \\
 
     // Styles for Home Section
     .home {
@@ -84,11 +190,21 @@
             display: flex;
             justify-content: space-between;
 
-            .aboutProfilePic {
-                border-radius: 50%;
-                max-height: 200px;
-                margin-right: 100px;
-                padding-top: 15px;
+            .imageWrapper {
+                display: flex;
+                flex-direction: column;
+                width: 25%;
+                margin-right: 50px;
+
+                .aboutProfilePic {
+                    border-radius: 50%;
+                    max-height: 250px;
+                    padding-top: 15px;
+                }
+
+                button {
+                    margin: 0 auto;
+                }
             }
 
             .aboutMeParagraph {
@@ -96,19 +212,52 @@
                 padding: 10px;
 
                 div:first-of-type {
+                    display: flex;
+                    flex-direction: column;
                     width: 50%;
-                    padding: 10px;
+                    padding: 15px;
+
+                    p:first-of-type {
+                        margin-bottom: 10px;
+                    }
                 }
 
                 div:nth-of-type(2) {
                     display: flex;
                     flex-direction: column;
-                    width: 50%;
                     justify-content: space-between;
+                    width: 50%;
                     padding: 10px;
 
-                    button {
-                        margin: 0 auto;
+                    p:first-of-type {
+                        margin-bottom: 10px;
+                    }
+
+                    .interests {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+
+                        i {
+                            font-size: 2rem;
+                        }
+
+                        .coffee {
+                            color: $colourBlue;
+                        }
+
+                        .tv {
+                            color: orangered;
+                        }
+
+                        .gamepad {
+                            color: #228B22;
+                        }
+
+                        .book {
+                            color: $colourYellow;
+                        }
                     }
                 }
             }
@@ -229,7 +378,7 @@
     .toolkit {
 
         .toolkitWrapper {
-            width: 80%;
+            width: 90%;
             display: flex;
             margin: 0 auto;
             justify-content: space-between;
@@ -246,14 +395,6 @@
                 .toolkitImage {
                     width: 50px;
                     height: 50px;
-                    -webkit-filter: grayscale(100%);
-                    -moz-filter: grayscale(100%);
-                    filter: grayscale(100%);
-                    opacity: 0.3;
-                }
-
-                .moreOpacity {
-                    opacity: 0.6;
                 }
             }
         }
@@ -263,7 +404,7 @@
     .contact {
         margin-bottom: 80px;
 
-        .contactContainer{
+        .contactContainer {
             display: flex;
 
             .emailMe {
@@ -272,31 +413,52 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 margin-right: 30px;
-    
-    
+
+
                 h4 {
                     font-size: 1.4rem;
                     margin: 15px 0;
                 }
-    
+
                 p {
                     font-size: 0.9rem;
                 }
-    
+
                 a {
                     text-decoration: none;
                     color: $colourPink;
                 }
+
+                .myEmail {
+                    cursor: pointer;
+                    width: 100%;
+                    color: $colourPink;
+                    padding: 0;
+                    background: none;
+                    box-shadow: none;
+                }
+
+                .copyPrompt {
+
+                    margin: 0 auto;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    text-align: center;
+                    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
+                    background: $colourPink;
+                    color: #fff;
+                    width: 65%;
+                }
             }
 
-            div:last-of-type{
+            div:last-of-type {
                 width: 66%;
 
                 .contactForm {
                     display: flex;
                     flex-direction: column;
-                    
-    
+
+
                     div {
                         display: flex;
                         width: 100%;
@@ -308,6 +470,10 @@
                         }
                     }
 
+                    textarea {
+                        resize: none;
+                    }
+
                     .formSubmit {
                         margin-right: auto;
                     }
@@ -316,11 +482,11 @@
 
             .emailSent {
                 width: 100%;
-                border-radius: 30px;
+                border-radius: 20px;
                 color: #3e774b;
                 background-color: #d4edda;
                 margin-bottom: 20px;
-                                    padding: 20px 30px;
+                padding: 20px 30px;
 
                 p {
                     margin: 0;
@@ -337,83 +503,4 @@
         }
 
     }
-}
-
-// General Stylings
-button {
-    font-family: $fontFamily;
-    font-weight: 500;
-    background-color: $colourPink;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 30px;
-    padding: 12px 28px;
-    border: none;
-
-    &:hover {
-        animation: pulse;
-        animation-duration: 1s;
-    }
-}
-
-input,
-textarea {
-    border-radius: 30px;
-    border: none;
-    font-family: $fontFamily;
-    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
-    padding: 20px 30px;
-    margin-bottom: 20px;
-
-    &::placeholder {
-        opacity: 0.3;
-    }
-}
-
-.sectionContainer {
-    color: $backgroundDark;
-    padding-top: 100px;
-    width: 90%;
-    margin: 0 auto;
-
-}
-
-.sectionTitle {
-    font-size: 2.2rem;
-    margin-bottom: 60px;
-    position: relative;
-}
-
-.sectionTitle:before {
-    content: "";
-    background-image: url(../assets/dots-bg.svg);
-    display: block;
-    height: 37px;
-    left: -14px;
-    top: -14px;
-    position: absolute;
-    width: 37px;
-}
-
-.chatBox {
-    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
-    position: relative;
-    border-radius: 20px;
-}
-
-.chatBox:before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 15px solid #FFF;
-    position: absolute;
-    left: -15px;
-    top: 20%;
-}
-
-// Morphext stylings for the landing page
-.morphext>.animated {
-    display: inline-block;
 }

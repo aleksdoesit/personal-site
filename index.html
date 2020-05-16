@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="styles/styles.css">
 	<link rel="stylesheet" href="./styles/animate.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script src="https://kit.fontawesome.com/2f36dc9985.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,7 +55,7 @@
 					<li><a href="#"><i class="fab fa-medium-m"></i></a></li>
 				</ul>
 
-				<button><a href="#contact"></a>Lets Chat!</button>
+				<button><a href="#contact"></a>Hire Me</button>
 
 			</div>
 
@@ -85,24 +86,30 @@
 		<!-- About Me Section -->
 		<section id='about' class='about sectionContainer'>
 
-			<h2 class='sectionTitle'>About Me</h2>
+			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>About Me</h2>
 
 			<div>
-				<div>
-					<img class='aboutProfilePic' src="./assets/about-temp.jpg" alt="Me, obviously">
+				<div data-aos="fade-up" data-aos-duration="800" class='imageWrapper'>
+					<img class='aboutProfilePic'
+						src="./assets/tempProfilePic.jpg" alt="Me, obviously">
+						<button><a href="#"></a>Download CV</button>
 				</div>
-				<div class='aboutMeParagraph chatBox'>
+				<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" class='aboutMeParagraph chatBox'>
 					<div>
 						<p>Hi I'm Aleks! A web developer based out of Toronto, Canada. I have a passion for writing DRY
 							and functinoal code, perfecting responsiveness, and designing accessible web-sites and
-							web-apps. My path to web development started through self-teaching before completing an
+							web-apps.</p><p>My path to web development started through self-teaching before completing an
 							extensive and rigirous bootcamp through Juno College.</p>
 					</div>
 					<div>
-						<p>When not coding you can find me drinking copious amounts of coffee, geeking out over movies
-							and games, or relaxing with a warm book.</p>
-						<p>Find out more -</p>
-						<button><a href="#"></a>My CV</button>
+						<p>Before a life as a programmer I attended and completed undergraduate degrees from York
+							University and Humber College.</p><p>When not coding you can find me drinking copious amounts of coffee, geeking out over movies and games, or relaxing with a warm book.</p>
+							<div class='interests'>
+								<i class="fas fa-coffee coffee"></i>
+								<i class="fas fa-tv tv"></i>
+								<i class="fas fa-gamepad gamepad"></i>
+								<i class="fas fa-book book"></i>
+							</div>
 					</div>
 				</div>
 			</div>
@@ -112,9 +119,9 @@
 		<!-- Portfolio Section -->
 		<section id='portfolio' class='portfolio sectionContainer'>
 
-			<h2 class='sectionTitle'>Recent Work</h2>
+			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>Recent Work</h2>
 
-			<div class='portfolioCarousel'>
+			<div data-aos="fade-up" data-aos-duration="800" class='portfolioCarousel'>
 
 				<div class="portfolioItem"><a href="https://robogames.github.io/RoboTrivia/" target="_blank">
 						<div class='hoverDetails'>
@@ -161,9 +168,9 @@
 		<!-- Toolkit Section - More Coming Soon! -->
 		<section id='toolkit' class='toolkit sectionContainer'>
 
-			<h2 class='sectionTitle'>My Toolkit</h2>
+			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>My Toolkit</h2>
 
-			<div class='toolkitWrapper'>
+			<div data-aos="fade-up" data-aos-duration="800" class='toolkitWrapper'>
 				<div>
 					<img class='toolkitImage' src="./assets/html5.svg" alt="">
 				</div>
@@ -174,22 +181,22 @@
 					<img class='toolkitImage' src="./assets/sass.svg" alt="">
 				</div>
 				<div>
-					<img class='toolkitImage moreOpacity' src="./assets/javascript.svg" alt="">
+					<img class='toolkitImage' src="./assets/javascript.svg" alt="">
 				</div>
 				<div>
 					<img class='toolkitImage' src="./assets/jquery.svg" alt="">
 				</div>
 				<div>
-					<img class='toolkitImage moreOpacity' src="./assets/react.svg" alt="">
+					<img class='toolkitImage' src="./assets/react.svg" alt="">
 				</div>
 				<div>
 					<img class='toolkitImage' src="./assets/github.svg" alt="">
 				</div>
 				<div>
-					<img class='toolkitImage moreOpacity' src="./assets/firebase.svg" alt="">
+					<img class='toolkitImage' src="./assets/firebase.svg" alt="">
 				</div>
 				<div>
-					<img class='toolkitImage moreOpacity' src="./assets/responsive.svg" alt="">
+					<img class='toolkitImage' src="./assets/responsive.svg" alt="">
 				</div>
 				<div>
 					<img class='toolkitImage' src="./assets/terminal.svg" alt="">
@@ -200,28 +207,35 @@
 
 		<section id='contact' class='contact sectionContainer'>
 
-			<h2 class='sectionTitle'>Get In Touch</h2>
+			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>Get In Touch</h2>
 
 			<div class='contactContainer'>
-				<div class='emailMe'>
-					<h4>Drop me a line!</h4>
-					<p>Not a fan of forms? Send me an <a href="mailto:nikolic.aleks90@gmail.com">email</a>. 🤘</p>
+				<div class='emailMe' id='emailMe'>
+					<h4 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">Drop me a line!</h4>
+					<p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">Not a fan of forms? Send
+						me an <a href="mailto:nikolic.aleks90@gmail.com">email</a>. 🤘</p>
+					<input data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800" class='myEmail'
+						id='myEmail' type="text" value='nikolic.aleks90@gmail.com'>
 				</div>
 
 				<div>
 					<form id='contactForm' class='contactForm' action='https://formspree.io/xgenowod' method='post'>
 						<div>
-							<input type="text" id='name' name='name' placeholder="Your name">
-							<input type="text" id='email' name='email' placeholder="Email address">
+							<input type="text" id='name' name='name' placeholder="Your name" required>
+							<input type="text" id='email' name='email' placeholder="Email address" required>
 						</div>
-						<input type="text" id='subject' name='subject' placeholder="Subject">
-						<textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+						<input type="text" id='subject' name='subject' placeholder="Subject" required>
+						<textarea name="message" id="message" cols="30" rows="5" placeholder="Message"
+							required></textarea>
 						<button type="submit" id='submit' name='submit' class='formSubmit'>Send Message</button>
 					</form>
 				</div>
 			</div>
 
 		</section>
+
+		<!-- Return to top of webpage -->
+		<button class='scrollToTop' id='scrollToTop'><i class="fas fa-arrow-up"></i></button>
 	</main>
 
 	<!-- Scripts -->
@@ -231,6 +245,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/contact.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		// Initialise the animate on scroll library
+		AOS.init();
+	</script>
 
 </body>
 
