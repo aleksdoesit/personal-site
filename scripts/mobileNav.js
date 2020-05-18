@@ -16,6 +16,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     // Declare target variable to be id from stored href
     let target = $(elementHref);
 
+    // Basic error handling
     if (target.length === 0) {
         return;
     }
@@ -30,8 +31,10 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: pos
     });
 
-    // Collapse the side nav menu once clicked
-    $('#fullHeader').toggleClass('headerToggle');
-    $('.wrapper').toggleClass('toggleBody');
-    $('.parallaxBackground').toggleClass('toggleBody');
+    // Collapse the side nav menu once clicked if window width is 1200px or smaller only
+    if ($(window).width() <= 1200) {
+        $('#fullHeader').toggleClass('headerToggle');
+        $('.wrapper').toggleClass('toggleBody');
+        $('.parallaxBackground').toggleClass('toggleBody');
+    }
 });
