@@ -1,69 +1,118 @@
 // Styling for our Header Section/Main Nav
 
 header {
-	display: flex;
-	flex-direction: column;
-	background: $backgroundDark;
-	width: 290px;
-	height: 100vh;
-	min-height: 100vh;
-	position: fixed;
-	left: 0;
+    display: flex;
+    flex-direction: column;
+    background: $backgroundDark;
+    width: 290px;
+    height: 100vh;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
     padding: 50px 40px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 
-	h2 {
-		color: #fff;
-		font-size: 2.5rem;
-		margin: 0;
+    h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        margin: 0;
+    }
 
-		span {
-			color: $colourPink;
-		}
-	}
+    span {
+        color: $colourPink;
+    }
 
-	nav {
+    nav {
 
-		ul {
-			display: flex;
-			flex-direction: column;
-			list-style: none;
-			margin: 150px 0;
-			padding: 0;
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin: 150px 0;
+            padding: 0;
 
-			li {
-				padding: 8px 0;
-				line-height: 2;
-				text-align: left;
+            li {
+                padding: 8px 0;
+                line-height: 2;
+                text-align: left;
 
-				a {
-					font-size: 16px;
-					font-weight: 600;
-					text-decoration: none;
-					color: #FFF;
-					@include transition(.3s);
+                a {
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: #FFF;
+                    @include transition(.3s);
 
-					&:hover {
-						color: $colourYellow;
-					}
+                    &:hover {
+                        color: $colourYellow;
+                    }
 
-					.icon {
-						color: $colourYellow;
-						margin-right: 20px;
-						height: 16px;
-						width: 18px;
-					}
-				}
-			}
-		}
-	}
+                    .icon {
+                        color: $colourYellow;
+                        margin-right: 20px;
+                        height: 16px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
 
-	footer {
-		margin-top: auto;
+    footer {
+        margin-top: auto;
 
-		p {
-			color: #9C9AB3;
-			font-size: 14px;
-		}
-	}
+        p {
+            color: #9C9AB3;
+            font-size: 14px;
+        }
+    }
+
+}
+
+// Styling for Mobile Hamburger Menu
+
+.mobileHeader {
+    display: none;
+
+    button {
+        background: none;
+        padding: 0;
+        margin: 20px 20px;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    h2 {
+        color: #fff;
+        font-size: 2rem;
+        margin: 20px 0;
+
+        span {
+            color: $colourPink;
+        }
+    }
+}
+
+// Transform class for toggling the header
+
+.headerToggle {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX();
+    @include transition(.3s);
+    z-index: 999;
+}
+
+.toggleBody {
+    opacity: .8;
+    -webkit-transform: translateX(290px);
+    -moz-transform: translateX(290px);
+    -ms-transform: translateX(290px);
+    -o-transform: translateX(290px);
+    transform: translateX(290px);
+    @include transition(.3s);
 }

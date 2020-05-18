@@ -1,0 +1,249 @@
+// First collapse - Removing the static nav and bringing in the mobile menu
+
+@media only screen and (max-width: 1200px) {
+    header {
+        @include transition(.3s);
+        -webkit-transform: translateX(-290px);
+        -moz-transform: translateX(-290px);
+        -ms-transform: translateX(-290px);
+        -o-transform: translateX(-290px);
+        transform: translateX(-290px);
+    }
+
+    .wrapper {
+        width: 100%;
+        margin-left: 0 !important;
+
+        .parallaxBackground {
+            left: 0;
+            width: 100vw;
+        }
+
+        .mobileHeader {
+            display: flex;
+        }
+    }
+}
+
+// Second collapse - Switching the About me section to columns, some small font and padding/margin adjustments
+
+@media only screen and (max-width: 880px) {
+    .wrapper {
+
+        .about {
+
+            .aboutContainer {
+                flex-direction: column;
+
+                .imageWrapper {
+                    margin: 0 auto;
+                    width: auto;
+                    margin-bottom: 40px;
+                }
+
+                .chatBox:before {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-right: 10px solid #fff;
+                    position: absolute;
+                    left: 50%;
+                    top: -15px;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .portfolio {
+
+            .portfolioCarousel {
+                flex-wrap: wrap;
+
+                .portfolioItem {
+                    width: 45%;
+                    margin: 0 auto 20px;
+
+                    h3 {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Third collapse - Adjusting toolkit and contact form as well as about me chatbox
+
+@media only screen and (max-width: 750px) {
+
+    .sectionContainer {
+        width: 80% !important;
+    }
+
+    .wrapper {
+
+        .aboutMeParagraph {
+            flex-direction: column;
+
+            div {
+                width: 100% !important;
+                padding: 0 !important;
+
+                .interests {
+                    padding-top: 30px !important;
+                }
+            }
+
+            div:first-of-type {
+                margin-bottom: 10px !important;
+            }
+        }
+
+        .toolkit {
+
+            .toolkitWrapper {
+
+                div {
+                    width: 25%;
+                }
+
+                div:nth-of-type(9) {
+                    margin-left: auto;
+                }
+
+                div:nth-of-type(10) {
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .contact {
+
+            .contactContainer {
+                flex-direction: column;
+
+                .emailMe {
+                    width: auto;
+                    min-height: 200px;
+                    margin-right: 0;
+                }
+
+                .contactForm {
+                    width: calc(100vw - 40%);
+                }
+            }
+        }
+    }
+
+}
+
+// Fourth collapse - mobile styllings begin, increasing wrapper width and stacking sections
+
+@media only screen and (max-width: 600px) {
+
+    .sectionContainer {
+        width: 90% !important;
+    }
+
+    .wrapper {
+
+        .contact {
+
+            .contactContainer {
+
+                .contactForm {
+                    width: calc(100vw - 20%);
+
+                    div {
+                        flex-direction: column;
+
+                        input {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Fifth collapse - final mobile stylings
+
+@media only screen and (max-width: 550px) {
+
+    .wrapper {
+
+        .about {
+
+            .aboutMeParagraph {
+                max-height: 300px;
+                overflow: scroll;
+            }
+
+            .aboutContainer {
+
+                .chatBox:before {
+                    border-right: 10px solid $colourPink;
+                    top: -5px;
+                }
+            }
+        }
+
+        .portfolio {
+
+            .portfolioCarousel {
+
+                .portfolioItem {
+
+                    .hoverDetails {
+
+                        .projectTitle {
+                            margin: 0;
+                            font-size: 1rem;
+                            top: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .toolkit {
+
+            .toolkitWrapper {
+
+                div {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+// Sixth collapse - some small adjustments on really small screens
+
+@media only screen and (max-width: 450px) {
+
+    .wrapper {
+
+        .portfolio {
+
+            .portfolioCarousel {
+
+                .portfolioItem {
+                    width: 70%;
+
+                    .hoverDetails {
+
+                        .projectTitle {
+                            font-size: 1.2rem;
+                            top: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

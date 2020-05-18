@@ -16,9 +16,9 @@
 </head>
 
 <body>
-
 	<!-- Primary Navagation Bar -->
-	<header>
+	<header id='fullHeader'>
+
 		<h2>Aleks<span>.</span></h2>
 
 		<nav>
@@ -32,11 +32,20 @@
 		</nav>
 
 		<footer>
-			<p>Created by Aleks Nikolic, 2020</p>
+			<p>Created by Aleks Nikolic, 2020<span>.</span></p>
 		</footer>
+
 	</header>
 
 	<main class='wrapper'>
+
+		<!-- Mobile Navigation and Hamburger Menu -->
+		<div class='mobileHeader'>
+			<div>
+				<button id='toggleMenu'><i class="fas fa-hamburger"></i></button>
+			</div>
+			<h2>Aleks<span>.</span></h2>
+		</div>
 
 		<!-- Main landing area - Home Section -->
 		<section id='home' class='home'>
@@ -61,8 +70,10 @@
 
 			<div class='scrollArrow'>
 				<p>Scroll Down</p>
-				<a href='#about'><i
-						class='animate__animated animate__slideOutDown animate__infinite animate__slow fas fa-sort-down'></i></a>
+				<a href='#about'>
+					<i
+						class='animate__animated animate__slideOutDown animate__infinite animate__slow fas fa-sort-down'></i>
+				</a>
 			</div>
 
 			<!-- Fancy parallax scrolling background -->
@@ -86,30 +97,32 @@
 		<!-- About Me Section -->
 		<section id='about' class='about sectionContainer'>
 
-			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>About Me</h2>
+			<h2 class='sectionTitle' data-aos="fade-up" data-aos-duration="800">About Me</h2>
 
-			<div>
-				<div data-aos="fade-up" data-aos-duration="800" class='imageWrapper'>
-					<img class='aboutProfilePic'
-						src="./assets/tempProfilePic.jpg" alt="Me, obviously">
-						<button><a href="#"></a>Download CV</button>
+			<div class='aboutContainer'>
+				<div class='imageWrapper' data-aos="fade-up" data-aos-duration="800">
+					<img class='aboutProfilePic' src="./assets/tempProfilePic.jpg" alt="Me, obviously">
+					<button><a href="#"></a>Download CV</button>
 				</div>
-				<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" class='aboutMeParagraph chatBox'>
+				<div class='aboutMeParagraph chatBox' data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
 					<div>
 						<p>Hi I'm Aleks! A web developer based out of Toronto, Canada. I have a passion for writing DRY
-							and functinoal code, perfecting responsiveness, and designing accessible web-sites and
-							web-apps.</p><p>My path to web development started through self-teaching before completing an
+							and functional code, perfecting responsiveness, and designing accessible web-sites and
+							web-apps.</p>
+						<p>My path to web development started through self-teaching before completing an
 							extensive and rigirous bootcamp through Juno College.</p>
 					</div>
 					<div>
 						<p>Before a life as a programmer I attended and completed undergraduate degrees from York
-							University and Humber College.</p><p>When not coding you can find me drinking copious amounts of coffee, geeking out over movies and games, or relaxing with a warm book.</p>
-							<div class='interests'>
-								<i class="fas fa-coffee coffee"></i>
-								<i class="fas fa-tv tv"></i>
-								<i class="fas fa-gamepad gamepad"></i>
-								<i class="fas fa-book book"></i>
-							</div>
+							University and Humber College.</p>
+						<p>When not coding you can find me drinking copious amounts of coffee, geeking out over movies
+							and games, or relaxing with a warm book.</p>
+						<div class='interests'>
+							<i class="fas fa-coffee coffee"></i>
+							<i class="fas fa-tv tv"></i>
+							<i class="fas fa-gamepad gamepad"></i>
+							<i class="fas fa-book book"></i>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -119,11 +132,12 @@
 		<!-- Portfolio Section -->
 		<section id='portfolio' class='portfolio sectionContainer'>
 
-			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>Recent Work</h2>
+			<h2 class='sectionTitle' data-aos="fade-up" data-aos-duration="800">Recent Work</h2>
 
-			<div data-aos="fade-up" data-aos-duration="800" class='portfolioCarousel'>
+			<div class='portfolioCarousel'>
 
-				<div class="portfolioItem"><a href="https://robogames.github.io/RoboTrivia/" target="_blank">
+				<div class='portfolioItem' data-aos="fade-in" data-aos-duration="800" data-aos-delay="150">
+					<a href="https://robogames.github.io/RoboTrivia/" target="_blank">
 						<div class='hoverDetails'>
 							<span class='portfolioCategory'>Collaborative</span>
 							<h3 class='projectTitle'>RoboTrivia Quiz App - Click Here to Play!</h3>
@@ -135,10 +149,11 @@
 						</div>
 					</a></div>
 
-				<div class="portfolioItem"><a href="">
+				<div class='portfolioItem' data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">
+					<a href="">
 						<div class='hoverDetails'>
 							<span class='portfolioCategory'>Coming Soon!</span>
-							<h3 class='projectTitle'>More Great Projects Coming - Please Check Back Soon</h3>
+							<h3 class='projectTitle'>More Great Projects Coming</h3>
 							<span class='moreInfo'><i class="fas fa-expand"></i></span>
 						</div>
 						<div class='portfolioImage'>
@@ -147,10 +162,11 @@
 						</div>
 					</a></div>
 
-				<div class="portfolioItem"><a href="">
+				<div class='portfolioItem' data-aos="fade-in" data-aos-duration="800" data-aos-delay="450">
+					<a href="">
 						<div class='hoverDetails'>
 							<span class='portfolioCategory'>Coming Soon!</span>
-							<h3 class='projectTitle'>More Great Projects Coming - Please Check Back Soon</h3>
+							<h3 class='projectTitle'>More Great Projects Coming</h3>
 							<span class='moreInfo'><i class="fas fa-expand"></i></span>
 						</div>
 						<div class='portfolioImage'>
@@ -168,9 +184,9 @@
 		<!-- Toolkit Section - More Coming Soon! -->
 		<section id='toolkit' class='toolkit sectionContainer'>
 
-			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>My Toolkit</h2>
+			<h2 class='sectionTitle' data-aos="fade-up" data-aos-duration="800">My Toolkit</h2>
 
-			<div data-aos="fade-up" data-aos-duration="800" class='toolkitWrapper'>
+			<div class='toolkitWrapper' data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
 				<div>
 					<img class='toolkitImage' src="./assets/html5.svg" alt="">
 				</div>
@@ -207,15 +223,15 @@
 
 		<section id='contact' class='contact sectionContainer'>
 
-			<h2 data-aos="fade-up" data-aos-duration="800" class='sectionTitle'>Get In Touch</h2>
+			<h2 class='sectionTitle' data-aos="fade-up" data-aos-duration="800">Get In Touch</h2>
 
 			<div class='contactContainer'>
 				<div class='emailMe' id='emailMe'>
 					<h4 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">Drop me a line!</h4>
 					<p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800">Not a fan of forms? Send
 						me an <a href="mailto:nikolic.aleks90@gmail.com">email</a>. 🤘</p>
-					<input data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800" class='myEmail'
-						id='myEmail' type="text" value='nikolic.aleks90@gmail.com'>
+					<input class='myEmail' id='myEmail' type="text" value='nikolic.aleks90@gmail.com' data-aos="fade-up"
+						data-aos-easing="ease-in-out" data-aos-duration="800">
 				</div>
 
 				<div>
@@ -243,9 +259,10 @@
 		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 	<script src="./scripts/morphext.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/contact.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src='scripts/mobileNav.js'></script>
 	<script>
 		// Initialise the animate on scroll library
 		AOS.init();
