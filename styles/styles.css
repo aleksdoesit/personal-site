@@ -484,8 +484,7 @@ textarea::placeholder {
 
 .wrapper .home {
   color: #fff;
-  height: 100vh;
-  min-height: 100vh;
+  height: calc(100vh - 80px);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

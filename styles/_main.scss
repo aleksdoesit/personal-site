@@ -113,8 +113,7 @@ textarea {
     // Styles for Home Section
     .home {
         color: #fff;
-        height: 100vh;
-        min-height: 100vh;
+        height: calc(100vh - 80px);
         width: 100%;
         display: flex;
         justify-content: center;
@@ -504,6 +503,5 @@ textarea {
                 }
             }
         }
-
     }
 }
