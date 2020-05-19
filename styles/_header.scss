@@ -116,3 +116,10 @@ header {
     transform: translateX(290px);
     @include transition(.3s);
 }
+
+// Adding active styles to Nav links once clicked
+
+.active {
+
+    color: $colourYellow;
+}

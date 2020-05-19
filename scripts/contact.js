@@ -14,6 +14,8 @@ window.addEventListener("DOMContentLoaded", function() {
         status.innerHTML = "Thanks!";
         $('#contactForm').prepend(`<div class='emailSent'><p>Your message successfully submitted. Thank you, I will get back to you soon!</p><button id='closePopup'><i class="fas fa-times"></i></button></div>`)
 
+        // Close 'thank you' on success popup
+
         $('#closePopup').click(function() {
             console.log('clicked!');
             $('.emailSent').remove()
@@ -51,5 +53,3 @@ function ajax(method, url, data, success, error) {
     };
     xhr.send(data);
 }
-
-// Close successful message popup

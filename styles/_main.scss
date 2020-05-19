@@ -274,6 +274,7 @@ textarea {
 
     // Styles for Portfolio Section
     .portfolio {
+        position: relative;
 
         .portfolioCarousel {
             display: flex;
@@ -363,6 +364,7 @@ textarea {
                     }
 
                     .hoverDetails {
+                        cursor: pointer;
 
                         .projectTitle,
                         .portfolioCategory,

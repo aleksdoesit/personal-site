@@ -1,4 +1,5 @@
 // Logic for Morphext - a simple jQuery library that uses animate.css to create a rotating text animation for the home page
+
 jQuery(".text-rotating").Morphext({
     animation: "bounceIn",
     separator: ",",
@@ -35,29 +36,3 @@ document.getElementById('myEmail').onclick = () => {
     // Mixing vanilla JS and jQuery? Sacrilege! I know I'm sorry!
     $(".copyPrompt").delay(1000).fadeOut(300);
 }
-
-
-//Get the button:
-scrollTopButton = document.getElementById("scrollToTop");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    displayOnScroll()
-};
-
-function displayOnScroll() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopButton.style.display = "block";
-    } else {
-        scrollTopButton.style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-// Using jQuery for simple .animate smooth scroll top
-$(".scrollToTop").click(function () {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 800);
-    return false;
-});

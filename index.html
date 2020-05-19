@@ -22,7 +22,7 @@
 		<h2>Aleks<span>.</span></h2>
 
 		<nav>
-			<ul>
+			<ul class='navMenu'>
 				<li><a href='#home'><i class="icon fas fa-home"></i>Home</a></li>
 				<li><a href='#about'><i class="icon fas fa-user"></i>About</a></li>
 				<li><a href='#portfolio'><i class="icon fas fa-folder-open"></i>Portfolio</a></li>
@@ -64,7 +64,7 @@
 					<li><a href="#"><i class="fab fa-medium-m"></i></a></li>
 				</ul>
 
-				<button><a href="#contact"></a>Hire Me</button>
+				<button class='contactMe'><a href="#contact"></a>Hire Me</button>
 
 			</div>
 
@@ -137,8 +137,8 @@
 			<div class='portfolioCarousel'>
 
 				<div class='portfolioItem' data-aos="fade-in" data-aos-duration="800" data-aos-delay="150">
-					<a href="https://robogames.github.io/RoboTrivia/" target="_blank">
-						<div class='hoverDetails'>
+					<!-- <a href="https://robogames.github.io/RoboTrivia/" target="_blank"> -->
+						<div id='portfolioItem1' class='hoverDetails'>
 							<span class='portfolioCategory'>Collaborative</span>
 							<h3 class='projectTitle'>RoboTrivia Quiz App - Click Here to Play!</h3>
 							<span class='moreInfo'><i class="fas fa-link"></i></span>
@@ -262,7 +262,8 @@
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/contact.js"></script>
-	<script src='scripts/mobileNav.js'></script>
+	<script src='scripts/navigation.js'></script>
+	<script src='scripts/portfolioModal.js'></script>
 	<script>
 		// Initialise the animate on scroll library
 		AOS.init();
