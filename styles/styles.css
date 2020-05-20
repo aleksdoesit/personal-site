@@ -250,6 +250,7 @@ header {
   min-height: 100vh;
   position: fixed;
   left: 0;
+  top: 0;
   padding: 50px 40px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -345,7 +346,7 @@ header footer p {
 }
 
 .toggleBody {
-  opacity: .8;
+  opacity: .7;
   -webkit-transform: translateX(290px);
   transform: translateX(290px);
   -webkit-transition: all 0.3s ease-in-out;
@@ -1046,6 +1047,10 @@ textarea::placeholder {
   .sectionContainer {
     width: 90% !important;
   }
+  .wrapper .portfolio .portfolioDiv .popupContainer {
+    left: calc(50% - 225px);
+    width: 450px;
+  }
   .wrapper .contact .contactContainer .contactForm {
     width: calc(100vw - 20%);
   }
@@ -1080,6 +1085,30 @@ textarea::placeholder {
 }
 
 @media only screen and (max-width: 450px) {
+  .wrapper .portfolio .portfolioDiv .portfolioMask .closePortfolioItem {
+    right: 20px;
+    top: 20px;
+  }
+  .wrapper .portfolio .portfolioDiv .popupContainer {
+    left: calc(50% - 125px);
+    width: 250px;
+  }
+  .wrapper .portfolio .portfolioDiv .popupContainer h3 {
+    font-size: 1.5rem !important;
+  }
+  .wrapper .portfolio .portfolioDiv .popupContainer div p {
+    font-size: 0.8rem;
+  }
+  .wrapper .portfolio .portfolioDiv .popupContainer div:last-of-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrapper .portfolio .portfolioDiv .popupContainer div:last-of-type button {
+    width: 100px;
+    padding: 5px 0;
+    margin: 20px 10px;
+  }
   .wrapper .portfolio .portfolioCarousel .portfolioItem {
     width: 70%;
   }
@@ -1149,6 +1178,7 @@ textarea::placeholder {
      object-fit: cover;
   -o-object-position: 50% 30%;
      object-position: 50% 30%;
+  overflow: hidden;
 }
 
 .portfolioDiv .popupContainer h3 {
@@ -1161,7 +1191,7 @@ textarea::placeholder {
 .portfolioDiv .popupContainer div {
   color: #353353;
   max-height: 200px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .portfolioDiv .popupContainer div p {
@@ -1261,5 +1291,6 @@ html {
   overflow-x: hidden;
   font-family: "Rubik", sans-serif;
   background-color: #F9F9FF;
+  max-width: 100vw;
 }
 /*# sourceMappingURL=styles.css.map */

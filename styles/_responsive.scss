@@ -150,6 +150,17 @@
 
     .wrapper {
 
+        .portfolio {
+
+            .portfolioDiv {
+
+                .popupContainer {
+                    left: calc(50% - 225px);
+                    width: 450px;
+                }
+            }
+        }
+
         .contact {
 
             .contactContainer {
@@ -229,6 +240,48 @@
     .wrapper {
 
         .portfolio {
+
+            .portfolioDiv {
+
+                .portfolioMask {
+
+                    .closePortfolioItem {
+                        right: 20px;
+                        top: 20px;
+                    }
+
+                }
+
+                .popupContainer {
+
+                    left: calc(50% - 125px);
+                    width: 250px;
+
+                    h3 {
+                        font-size: 1.5rem !important;
+                    }
+
+                    div {
+
+                        p {
+
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    div:last-of-type {
+                        display: flex;
+
+                        button {
+                            width: 100px;
+                            padding: 5px 0;
+                            margin: 20px 10px;
+                        }
+                    }
+
+                }
+
+            }
 
             .portfolioCarousel {
 

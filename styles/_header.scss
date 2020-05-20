@@ -9,6 +9,7 @@ header {
     min-height: 100vh;
     position: fixed;
     left: 0;
+    top: 0;
     padding: 50px 40px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -105,10 +106,11 @@ header {
     transform: translateX();
     @include transition(.3s);
     z-index: 999;
+    // position: sticky;
 }
 
 .toggleBody {
-    opacity: .8;
+    opacity: .7;
     -webkit-transform: translateX(290px);
     -moz-transform: translateX(290px);
     -ms-transform: translateX(290px);
