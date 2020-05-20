@@ -86,6 +86,7 @@
     .wrapper {
 
         .aboutMeParagraph {
+            display: block;
             flex-direction: column;
 
             div {
@@ -192,6 +193,7 @@
             .aboutMeParagraph {
                 max-height: 300px;
                 overflow: scroll;
+                display: block !important;
             }
 
             .aboutContainer {
