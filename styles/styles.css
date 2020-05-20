@@ -315,6 +315,7 @@ header footer p {
 
 .mobileHeader {
   display: none;
+  background-color: #353353;
 }
 
 .mobileHeader button {
@@ -480,16 +481,15 @@ textarea::placeholder {
 
 .wrapper {
   margin-left: 290px;
-  height: 100vh;
-  width: auto;
-  background-color: #353353;
+  width: calc(100vw - 290px);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .wrapper .home {
+  position: relative;
   color: #fff;
-  height: calc(100vh - 80px);
+  height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -500,9 +500,11 @@ textarea::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #353353;
 }
 
 .wrapper .home .intro {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1109,7 +1111,7 @@ textarea::placeholder {
   .wrapper .portfolio .portfolioDiv .popupContainer div:last-of-type button {
     width: 100px;
     padding: 5px 0;
-    margin: 20px 10px;
+    margin: 20px 10px 0;
   }
   .wrapper .portfolio .portfolioCarousel .portfolioItem {
     width: 70%;
@@ -1208,11 +1210,15 @@ textarea::placeholder {
   width: 130px;
 }
 
+.portfolioDiv .popupContainer button a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .parallaxBackground {
   position: absolute;
   top: 0;
-  left: 290px;
-  width: calc(100vw - 290px);
+  width: 100vw;
   height: 100%;
 }
 
@@ -1261,7 +1267,7 @@ textarea::placeholder {
 .parallaxBackground .i8 {
   color: #61DBFB !important;
   top: 10% !important;
-  left: 10% !important;
+  left: 16% !important;
 }
 
 .parallaxBackground .i9 {
@@ -1294,5 +1300,9 @@ html {
   font-family: "Rubik", sans-serif;
   background-color: #F9F9FF;
   max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -74,6 +74,7 @@ header {
 
 .mobileHeader {
     display: none;
+    background-color: $backgroundDark;
 
     button {
         background: none;
@@ -110,6 +111,7 @@ header {
 }
 
 .toggleBody {
+    // width: calc(100% - 290px) !important;
     opacity: .7;
     -webkit-transform: translateX(290px);
     -moz-transform: translateX(290px);

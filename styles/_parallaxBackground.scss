@@ -3,8 +3,7 @@
 .parallaxBackground {
     position: absolute;
     top: 0;
-    left: 290px;
-    width: calc(100vw - 290px);
+    width: 100vw;
     height: 100%;
 
     .i1 {
@@ -52,7 +51,7 @@
     .i8 {
         color: #61DBFB !important;
         top: 10% !important;
-        left: 10% !important;
+        left: 16% !important;
     }
 
     .i9 {

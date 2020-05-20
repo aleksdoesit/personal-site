@@ -18,7 +18,7 @@ document.getElementById('portfolioItem1').addEventListener('click', function () 
     <p>This project utilised React and dynamic API calls to generate questions from an array of categories. In addition scores are tracked and uploaded to a leaderboard hosted on Firebase</p>
     </div>
     <div>
-    <button>Visit Site</button><button>GitHub</button>
+    <button><a href='https://robogames.github.io/RoboTrivia' target="_blank"/>Visit Site</a></button><button><a href='https://github.com/RoboGames/RoboTrivia' target="_blank">Git Hub</a></button>
     </div>
     </div>
     `

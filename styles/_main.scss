@@ -103,23 +103,25 @@ textarea {
 // Wrapper for all elements
 .wrapper {
     margin-left: 290px;
-    height: 100vh;
-    width: auto;
-    background-color: $backgroundDark;
+    // height: 100vh;
+    width: calc(100vw - 290px);
     @include transition(.3s);
 
     // ----------> SECTION STYLES <------------ \\
 
     // Styles for Home Section
     .home {
+        position: relative;
         color: #fff;
-        height: calc(100vh - 80px);
+        height: 100vh;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: $backgroundDark;
 
         .intro {
+            z-index: 2;
             display: flex;
             flex-direction: column;
             align-items: center;
