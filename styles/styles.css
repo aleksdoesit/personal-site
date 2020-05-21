@@ -606,6 +606,11 @@ textarea::placeholder {
   margin: 0 auto;
 }
 
+.wrapper .about .aboutContainer .imageWrapper button a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .wrapper .about .aboutContainer .aboutMeParagraph {
   display: -webkit-box;
   display: -ms-flexbox;
