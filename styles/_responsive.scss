@@ -302,3 +302,76 @@
         }
     }
 }
+
+// First Expansion for 1440p Monitor
+
+@media only screen and (min-width: 1920px) {
+
+    header {
+        width: 500px;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        nav {
+
+            ul {
+
+                li {
+
+                    a {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        footer {
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .wrapper {
+        width: calc(100vw - 500px);
+        margin-left: 500px;
+
+        .sectionTitle {
+            font-size: 3rem;
+        }
+
+        .about {
+
+            .aboutContainer {
+                justify-content: center;
+
+                .imageWrapper {
+                    width: 30%;
+                    height: 100%;
+
+                    .aboutProfilePic {
+                        max-height: 500px;
+                    }
+                }
+
+                .aboutMeParagraph {
+                    top: 20px;
+                    flex-direction: column;
+                    width: 40%;
+                    height: 50%;
+
+                    div:first-of-type {
+                        width: auto;
+                    }
+
+                    div:nth-of-type(2) {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

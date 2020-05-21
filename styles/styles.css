@@ -1122,6 +1122,55 @@ textarea::placeholder {
   }
 }
 
+@media only screen and (min-width: 1920px) {
+  header {
+    width: 500px;
+  }
+  header h2 {
+    font-size: 3rem;
+  }
+  header nav ul li a {
+    font-size: 1.8rem;
+  }
+  header footer p {
+    font-size: 1.5rem;
+  }
+  .wrapper {
+    width: calc(100vw - 500px);
+    margin-left: 500px;
+  }
+  .wrapper .sectionTitle {
+    font-size: 3rem;
+  }
+  .wrapper .about .aboutContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .about .aboutContainer .imageWrapper {
+    width: 30%;
+    height: 100%;
+  }
+  .wrapper .about .aboutContainer .imageWrapper .aboutProfilePic {
+    max-height: 500px;
+  }
+  .wrapper .about .aboutContainer .aboutMeParagraph {
+    top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40%;
+    height: 50%;
+  }
+  .wrapper .about .aboutContainer .aboutMeParagraph div:first-of-type {
+    width: auto;
+  }
+  .wrapper .about .aboutContainer .aboutMeParagraph div:nth-of-type(2) {
+    width: auto;
+  }
+}
+
 .portfolioDiv {
   display: -webkit-box;
   display: -ms-flexbox;
