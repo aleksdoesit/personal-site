@@ -6,16 +6,6 @@ $('#toggleMenu').on('click', function () {
     $('.parallaxBackground').toggleClass('toggleBody');
 })
 
-var docWidth = document.documentElement.offsetWidth;
-[].forEach.call(
-    document.querySelectorAll('*'),
-    function (el) {
-        if (el.offsetWidth > docWidth) {
-            console.log(el);
-        }
-    }
-);
-
 // Smooth scrolling to sections by href
 
 $(document).on('click', 'a[href^="#"]', function (event) {
