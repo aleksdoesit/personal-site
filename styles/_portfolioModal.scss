@@ -70,14 +70,17 @@
             }
         }
 
-        button {
+        .linkWrapper {
             overflow: hidden;
-            margin: 20px;
-            width: 130px;
 
-            a {
-                text-decoration: none;
-                color: #fff;
+            button {
+                margin: 20px;
+                width: 130px;
+    
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
             }
         }
     }

@@ -1205,13 +1205,16 @@ textarea::placeholder {
   margin: 0;
 }
 
-.portfolioDiv .popupContainer button {
+.portfolioDiv .popupContainer .linkWrapper {
   overflow: hidden;
+}
+
+.portfolioDiv .popupContainer .linkWrapper button {
   margin: 20px;
   width: 130px;
 }
 
-.portfolioDiv .popupContainer button a {
+.portfolioDiv .popupContainer .linkWrapper button a {
   text-decoration: none;
   color: #fff;
 }
