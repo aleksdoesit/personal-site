@@ -1194,7 +1194,7 @@ textarea::placeholder {
 
 .portfolioDiv .popupContainer div {
   color: #353353;
-  max-height: 200px;
+  max-height: 250px;
   overflow-y: scroll;
 }
 
@@ -1206,6 +1206,7 @@ textarea::placeholder {
 }
 
 .portfolioDiv .popupContainer button {
+  overflow: hidden;
   margin: 20px;
   width: 130px;
 }

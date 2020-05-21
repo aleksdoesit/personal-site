@@ -59,7 +59,7 @@
 
         div {
             color: $backgroundDark;
-            max-height: 200px;
+            max-height: 250px;
             overflow-y: scroll;
 
             p {
@@ -71,6 +71,7 @@
         }
 
         button {
+            overflow: hidden;
             margin: 20px;
             width: 130px;
 
