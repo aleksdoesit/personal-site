@@ -1,0 +1,15 @@
+# Publish Vite production output only (not repo root / dev index.html).
+
+[build.environment]
+  # Netlify’s default Node can be very old; TypeScript 5’s tsc uses ?? and crashes with:
+  # SyntaxError: Unexpected token ?
+  NODE_VERSION = "20"
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

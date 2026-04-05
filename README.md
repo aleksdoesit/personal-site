@@ -11,6 +11,10 @@ Personal portfolio (React + TypeScript + Vite). Live at [imaleks.dev](https://im
 
 ## Deploy
 
-Build the site, then upload the contents of `dist/` to your static host (same as before: any host that serves static files at the domain root works with `base: '/'` in Vite).
+Production output is **`dist/`** after `npm run build`. Do not publish the repo root (the root `index.html` is for Vite dev only).
 
-Ensure binary assets exist under `public/assets/` (for example `profile.png`, `tempProfilePic.jpg`, `robotrivia.png`, `bingr.png`, CV PDF, and full favicon PNGs referenced by `site.webmanifest`).
+### Netlify
+
+[`netlify.toml`](netlify.toml) sets **publish = `dist`**, **`NODE_VERSION = "20"`**, and an SPA fallback. Netlify’s old default Node breaks the build with `SyntaxError: Unexpected token ?` inside `tsc` — Node 20 fixes that. [`.nvmrc`](.nvmrc) also pins `20` for local `nvm use`.
+
+Ensure assets live under `public/assets/` so they copy into `dist/assets/` (images, CV PDF, favicons referenced by `site.webmanifest`).
