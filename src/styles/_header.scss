@@ -104,7 +104,7 @@ header {
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
-    transform: translateX();
+    transform: translateX(0);
     @include transition(.3s);
     z-index: 999;
     // position: sticky;
