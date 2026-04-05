@@ -3,7 +3,9 @@
 .parallaxBackground {
     position: absolute;
     top: 0;
-    width: 100vw;
+    left: 0;
+    right: 0;
+    width: auto;
     height: 100%;
 
     .i1 {
