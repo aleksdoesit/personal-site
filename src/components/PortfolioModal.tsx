@@ -1,7 +1,7 @@
 import AOS from 'aos';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { PORTFOLIO_ITEMS } from '../data/portfolio';
+import { ALL_PROJECT_ITEMS } from '../data/allProjectItems';
 import { closePortfolioModal } from '../store/uiSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 
@@ -9,7 +9,7 @@ export function PortfolioModal() {
   const dispatch = useAppDispatch();
   const activeId = useAppSelector((s) => s.ui.activePortfolioId);
 
-  const item = PORTFOLIO_ITEMS.find((p) => p.id === activeId);
+  const item = ALL_PROJECT_ITEMS.find((p) => p.id === activeId);
   const modal = item?.modal;
 
   useEffect(() => {
@@ -52,18 +52,24 @@ export function PortfolioModal() {
             <p key={p.slice(0, 48)}>{p}</p>
           ))}
         </div>
-        <div className="linkWrapper">
-          <button type="button">
-            <a href={modal.visitUrl} target="_blank" rel="noreferrer">
-              Visit Site
-            </a>
-          </button>
-          <button type="button">
-            <a href={modal.repoUrl} target="_blank" rel="noreferrer">
-              Git Hub
-            </a>
-          </button>
-        </div>
+        {(modal.visitUrl || modal.repoUrl) ? (
+          <div className="linkWrapper">
+            {modal.visitUrl ? (
+              <button type="button">
+                <a href={modal.visitUrl} target="_blank" rel="noreferrer">
+                  Visit Site
+                </a>
+              </button>
+            ) : null}
+            {modal.repoUrl ? (
+              <button type="button">
+                <a href={modal.repoUrl} target="_blank" rel="noreferrer">
+                  Git Hub
+                </a>
+              </button>
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </div>
   );

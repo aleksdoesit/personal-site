@@ -1,23 +1,15 @@
-export type PortfolioModalData = {
-  heading: string;
-  image: string;
-  imageAlt: string;
-  paragraphs: string[];
-  visitUrl: string;
-  repoUrl: string;
-};
+import type { ProjectCardItem } from './projectTypes';
 
-export type PortfolioItem = {
-  id: string;
-  category: string;
-  title: string;
-  cardImage: string;
-  cardImageAlt: string;
-  aosDelay: number;
-  modal?: PortfolioModalData;
-};
+/**
+ * Personal / public projects — demos, GitHub, etc.
+ *
+ * Section UI is currently a “coming soon” placeholder; restore the array below
+ * and switch HomePage back to `<FeaturedWorkSection … items={PERSONAL_PROJECT_ITEMS} />`.
+ */
+export const PERSONAL_PROJECT_ITEMS: ProjectCardItem[] = [];
 
-export const PORTFOLIO_ITEMS: PortfolioItem[] = [
+/*
+export const PERSONAL_PROJECT_ITEMS: ProjectCardItem[] = [
   {
     id: 'robotrivia',
     category: 'Collaborative',
@@ -59,9 +51,10 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 'coming-soon',
     category: 'Coming Soon!',
-    title: 'More Great Projects Coming',
+    title: 'More personal builds in the pipeline',
     cardImage: '/assets/computer.svg',
     cardImageAlt: '',
     aosDelay: 450,
   },
 ];
+*/

@@ -7,7 +7,8 @@ import { MOBILE_NAV_BREAKPOINT, scrollToSectionId } from '../utils/scroll';
 const LINKS = [
   { id: 'home', label: 'Home', icon: 'fas fa-home' },
   { id: 'about', label: 'About', icon: 'fas fa-user' },
-  { id: 'portfolio', label: 'Portfolio', icon: 'fas fa-folder-open' },
+  { id: 'professional', label: 'My Work', icon: 'fas fa-briefcase' },
+  { id: 'projects', label: 'Projects', icon: 'fas fa-folder-open' },
   { id: 'toolkit', label: 'Toolkit', icon: 'fas fa-toolbox' },
   { id: 'contact', label: 'Contact', icon: 'fas fa-comments' },
 ] as const;

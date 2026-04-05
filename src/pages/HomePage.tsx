@@ -5,10 +5,13 @@ import { ContactSection } from '../components/ContactSection';
 import { Header } from '../components/Header';
 import { HomeSection } from '../components/HomeSection';
 import { MobileHeader } from '../components/MobileHeader';
+// import { FeaturedWorkSection } from '../components/FeaturedWorkSection';
 import { PortfolioModal } from '../components/PortfolioModal';
-import { PortfolioSection } from '../components/PortfolioSection';
 import { ScrollToTop } from '../components/ScrollToTop';
+import { SectionComingSoon } from '../components/SectionComingSoon';
 import { ToolkitSection } from '../components/ToolkitSection';
+// import { PERSONAL_PROJECT_ITEMS } from '../data/personalProjects';
+// import { PROFESSIONAL_ITEMS } from '../data/professionalWork';
 import { closeMobileMenu } from '../store/uiSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { MOBILE_NAV_BREAKPOINT } from '../utils/scroll';
@@ -42,7 +45,35 @@ export function HomePage() {
         <MobileHeader />
         <HomeSection />
         <AboutSection />
-        <PortfolioSection />
+
+        <SectionComingSoon
+          id="professional"
+          title="Professional Work"
+          message="Under construction — this section will highlight consulting and client work soon."
+        />
+
+        <SectionComingSoon
+          id="projects"
+          title="Projects"
+          message="Coming soon — personal builds and demos will appear here."
+        />
+
+        {/*
+        Restore project grids when ready (uncomment imports above):
+        <FeaturedWorkSection
+          id="professional"
+          title="Professional Work"
+          subtitle="Consulting and client delivery — representative engagements (many under NDA)."
+          items={PROFESSIONAL_ITEMS}
+        />
+        <FeaturedWorkSection
+          id="projects"
+          title="Projects"
+          subtitle="Personal builds, experiments, and public demos."
+          items={PERSONAL_PROJECT_ITEMS}
+        />
+        */}
+
         <ToolkitSection />
         <ContactSection />
         <ScrollToTop />
