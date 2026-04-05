@@ -1,0 +1,13 @@
+# Netlify must publish the Vite *production* output (dist/), not the repo root.
+# Serving the root index.html causes the browser to request /src/main.tsx, which
+# is TypeScript source — wrong MIME type and not valid for production.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Client-side routing (React Router): non-file URLs fall back to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
