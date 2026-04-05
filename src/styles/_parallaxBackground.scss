@@ -1,4 +1,5 @@
 // Styling for the scrolling background used in conjunction with the parallax script library
+@use 'mixins' as *;
 
 .parallaxBackground {
     position: absolute;
@@ -78,5 +79,10 @@
         color: #c16e99;
         top: 40% !important;
         left: 30% !important;
+    }
+
+    .i13 {
+        top: 25% !important;
+        left: 50% !important;
     }
 }

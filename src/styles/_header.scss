@@ -1,4 +1,5 @@
 // Styling for our Header Section/Main Nav
+@use 'mixins' as *;
 
 header {
     display: flex;
