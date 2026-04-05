@@ -1,4 +1,5 @@
 // ----------> GENERAL STYLES <------------ \\
+@use 'mixins' as *;
 
 button {
     font-family: $fontFamily;

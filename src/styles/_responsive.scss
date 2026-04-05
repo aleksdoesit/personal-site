@@ -1,4 +1,5 @@
 // First collapse - Removing the static nav and bringing in the mobile menu
+@use 'mixins' as *;
 
 @media only screen and (max-width: 1200px) {
     header {

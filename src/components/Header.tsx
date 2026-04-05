@@ -1,6 +1,7 @@
-import { type MouseEvent, useState } from 'react';
+import { type MouseEvent } from 'react';
 import { closeMobileMenu } from '../store/uiSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { useScrollSpy } from '../hooks/useScrollSpy';
 import { MOBILE_NAV_BREAKPOINT, scrollToSectionId } from '../utils/scroll';
 
 const LINKS = [
@@ -11,10 +12,12 @@ const LINKS = [
   { id: 'contact', label: 'Contact', icon: 'fas fa-comments' },
 ] as const;
 
+const SECTION_IDS = LINKS.map((l) => l.id);
+
 export function Header() {
   const dispatch = useAppDispatch();
   const mobileMenuOpen = useAppSelector((s) => s.ui.mobileMenuOpen);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useScrollSpy(SECTION_IDS, 'home');
 
   const onNavClick = (e: MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
@@ -40,6 +43,7 @@ export function Header() {
               <a
                 href={`#${id}`}
                 className={activeSection === id ? 'active' : undefined}
+                aria-current={activeSection === id ? 'location' : undefined}
                 onClick={(e) => onNavClick(e, id)}
               >
                 <i className={`icon ${icon}`} aria-hidden />
