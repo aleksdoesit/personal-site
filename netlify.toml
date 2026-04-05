@@ -2,6 +2,11 @@
 # Serving the root index.html causes the browser to request /src/main.tsx, which
 # is TypeScript source — wrong MIME type and not valid for production.
 
+[build.environment]
+  # Netlify’s default Node can be too old; TypeScript 5’s tsc uses ?? and fails with:
+  # SyntaxError: Unexpected token ?
+  NODE_VERSION = "20"
+
 [build]
   command = "npm run build"
   publish = "dist"

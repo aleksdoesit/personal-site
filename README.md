@@ -15,12 +15,13 @@ Personal portfolio (React + TypeScript + Vite). Live at [imaleks.dev](https://im
 
 ### Netlify
 
-This repo includes [`netlify.toml`](netlify.toml):
+[`netlify.toml`](netlify.toml) and [`.nvmrc`](.nvmrc) configure:
 
 - **Build command:** `npm run build`
 - **Publish directory:** `dist`
+- **Node:** `20` via `NODE_VERSION` — Netlify’s older default Node can crash the build inside `tsc` with **`SyntaxError: Unexpected token ?`** (TypeScript 5 uses modern JS). If you set `NODE_VERSION` in the Netlify UI, use **`20`** or remove it so `netlify.toml` wins.
 
-In the Netlify UI: **Site configuration → Build & deploy → Build settings** must match (or leave blank to use `netlify.toml`). After changing settings, trigger a new deploy.
+**Site configuration → Build & deploy → Build settings** should match the file (or stay empty to use `netlify.toml`). Trigger a new deploy after pushing changes.
 
 ### Other hosts
 
