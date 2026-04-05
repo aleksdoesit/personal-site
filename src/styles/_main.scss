@@ -55,6 +55,41 @@ textarea {
     width: 37px;
 }
 
+.sectionSubtitle {
+    color: #5E5C7F;
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 52rem;
+    margin: -44px 0 48px;
+}
+
+.sectionComingSoon .comingSoonBanner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.15);
+    border: 2px dashed rgba(108, 108, 229, 0.45);
+    background: linear-gradient(135deg, rgba(249, 249, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    color: $backgroundDark;
+    max-width: 40rem;
+
+    i {
+        font-size: 2rem;
+        color: $colourYellow;
+        flex-shrink: 0;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-weight: 500;
+        color: #5E5C7F;
+    }
+}
+
 .chatBox {
     box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.3);
     position: relative;
