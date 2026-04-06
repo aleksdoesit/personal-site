@@ -1,7 +1,7 @@
 import type { ProjectCardItem } from './projectTypes';
 
 /**
- * Personal / public projects — demos, GitHub, etc.
+ * Personal / public projects - demos, GitHub, etc.
  *
  * Section UI is currently a “coming soon” placeholder; restore the array below
  * and switch HomePage back to `<FeaturedWorkSection … items={PERSONAL_PROJECT_ITEMS} />`.

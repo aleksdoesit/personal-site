@@ -1,6 +1,6 @@
 # Netlify must publish the Vite *production* output (dist/), not the repo root.
 # Serving the root index.html causes the browser to request /src/main.tsx, which
-# is TypeScript source — wrong MIME type and not valid for production.
+# is TypeScript source - wrong MIME type and not valid for production.
 
 [build.environment]
   # Netlify’s default Node can be too old; TypeScript 5’s tsc uses ?? and fails with:
