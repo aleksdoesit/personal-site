@@ -8,6 +8,7 @@ import { MobileHeader } from '../components/MobileHeader';
 // import { FeaturedWorkSection } from '../components/FeaturedWorkSection';
 import { PortfolioModal } from '../components/PortfolioModal';
 import { ScrollToTop } from '../components/ScrollToTop';
+import { ProfessionalWorkSection } from '../components/ProfessionalWorkSection';
 import { SectionComingSoon } from '../components/SectionComingSoon';
 import { ToolkitSection } from '../components/ToolkitSection';
 // import { PERSONAL_PROJECT_ITEMS } from '../data/personalProjects';
@@ -19,51 +20,47 @@ import { MOBILE_NAV_BREAKPOINT } from '../utils/scroll';
 let aosInitialized = false;
 
 export function HomePage() {
-  const dispatch = useAppDispatch();
-  const mobileMenuOpen = useAppSelector((s) => s.ui.mobileMenuOpen);
+    const dispatch = useAppDispatch();
+    const mobileMenuOpen = useAppSelector((s) => s.ui.mobileMenuOpen);
 
-  useEffect(() => {
-    if (aosInitialized) return;
-    aosInitialized = true;
-    AOS.init();
-  }, []);
+    useEffect(() => {
+        if (aosInitialized) return;
+        aosInitialized = true;
+        AOS.init();
+    }, []);
 
-  useEffect(() => {
-    const onResize = () => {
-      if (window.innerWidth > MOBILE_NAV_BREAKPOINT) {
-        dispatch(closeMobileMenu());
-      }
-    };
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [dispatch]);
+    useEffect(() => {
+        const onResize = () => {
+            if (window.innerWidth > MOBILE_NAV_BREAKPOINT) {
+                dispatch(closeMobileMenu());
+            }
+        };
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, [dispatch]);
 
-  return (
-    <>
-      <Header />
-      <main className={`wrapper${mobileMenuOpen ? ' toggleBody' : ''}`}>
-        <MobileHeader />
-        <HomeSection />
-        <AboutSection />
+    return (
+        <>
+            <Header />
+            <main className={`wrapper${mobileMenuOpen ? ' toggleBody' : ''}`}>
+                <MobileHeader />
+                <HomeSection />
+                <AboutSection />
 
-        <SectionComingSoon
-          id="professional"
-          title="Professional Work"
-          message="Under construction — this section will highlight consulting and client work soon."
-        />
+                <ProfessionalWorkSection />
 
-        <SectionComingSoon
-          id="projects"
-          title="Projects"
-          message="Coming soon — personal builds and demos will appear here."
-        />
+                <SectionComingSoon
+                    id="projects"
+                    title="Projects"
+                    message="Coming soon - personal builds and demos will appear here."
+                />
 
-        {/*
+                {/*
         Restore project grids when ready (uncomment imports above):
         <FeaturedWorkSection
           id="professional"
           title="Professional Work"
-          subtitle="Consulting and client delivery — representative engagements (many under NDA)."
+          subtitle="Consulting and client delivery - representative engagements (many under NDA)."
           items={PROFESSIONAL_ITEMS}
         />
         <FeaturedWorkSection
@@ -74,11 +71,11 @@ export function HomePage() {
         />
         */}
 
-        <ToolkitSection />
-        <ContactSection />
-        <ScrollToTop />
-      </main>
-      <PortfolioModal />
-    </>
-  );
+                <ToolkitSection />
+                <ContactSection />
+                <ScrollToTop />
+            </main>
+            <PortfolioModal />
+        </>
+    );
 }
