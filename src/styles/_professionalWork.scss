@@ -48,7 +48,7 @@
 
         &:hover {
             background: rgba(249, 249, 255, 0.95);
-            // Pulse scales the whole control and gets clipped by overflow — use shadow on parent instead
+            // Pulse scales the whole control and gets clipped by overflow - use shadow on parent instead
             animation: none;
         }
 

@@ -36,11 +36,19 @@
 
             .aboutContainer {
                 flex-direction: column;
+                align-items: stretch;
 
                 .imageWrapper {
-                    margin: 0 auto;
+                    flex: 0 0 auto;
+                    margin: 0 auto 40px;
                     width: auto;
-                    margin-bottom: 40px;
+                    max-width: 100%;
+                }
+
+                .aboutMeParagraph {
+                    flex: 0 0 auto;
+                    width: 100%;
+                    min-width: 0;
                 }
 
                 .chatBox:before {
@@ -348,25 +356,29 @@
         .about {
 
             .aboutContainer {
-                justify-content: center;
+                justify-content: flex-start;
+                align-items: flex-start;
 
                 .imageWrapper {
-                    width: 30%;
-                    height: 100%;
+                    flex: 0 0 auto;
+                    width: min(100%, 420px);
+                    height: auto;
 
                     .aboutProfilePic {
                         max-height: 500px;
+                        width: 100%;
+                        max-width: min(420px, 100%);
                     }
                 }
 
                 .aboutMeParagraph {
-                    top: 20px;
-                    flex-direction: column;
-                    width: 40%;
-                    height: 50%;
+                    flex: 1 1 0;
+                    min-width: 0;
+                    width: auto;
+                    height: auto;
 
                     div:first-of-type {
-                        width: auto;
+                        width: 100%;
                     }
 
                     div:nth-of-type(2) {
