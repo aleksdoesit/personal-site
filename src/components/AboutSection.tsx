@@ -7,7 +7,7 @@ export function AboutSection() {
 
             <div className="aboutContainer">
                 <div className="imageWrapper" data-aos="fade-up" data-aos-duration="800">
-                    <img className="aboutProfilePic" src="/assets/tempProfilePic.jpg" alt="Me, obviously" />
+                    <img className="aboutProfilePic" src="/assets/tempProfilePic.jpg" alt="Aleksandar Nikolic" />
                     <button type="button">
                         <a href="/assets/Aleksandar Nikolic - Senior Software Developer.pdf" target="_blank" rel="noreferrer">
                             Download CV
@@ -22,29 +22,23 @@ export function AboutSection() {
                 >
                     <div>
                         <p>
-                            Hi I&apos;m Aleks! A web developer based out of Toronto, Canada. I have a passion for writing DRY and
-                            functional code, perfecting responsiveness, and designing accessible web-sites and web-apps.
+                            I&apos;m Aleksandar Nikolic, a full-stack software developer based in Toronto. For more than five
+                            years I have worked in a consultancy capacity, delivering end-to-end solutions across back-end
+                            services, databases, and front-end applications for large, regulated environments.
                         </p>
                         <p>
-                            My path to web development started through self-teaching before completing an extensive and rigirous
-                            bootcamp through Juno College.
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Before a life as a programmer I attended and completed undergraduate degrees from York University and
-                            Humber College.
+                            Recent engagements include work for Bell Media on streaming and metadata platforms, and for the Royal
+                            Canadian Mounted Police on national digital services, alongside other federal and provincial programs.
+                            I care about clear architecture, reliable data flows, accessible UIs, and shipping software that holds up
+                            under real-world scale.
                         </p>
                         <p>
-                            When not coding you can find me drinking copious amounts of coffee, geeking out over movies and games,
-                            or relaxing with a warm book.
+                            Outside of client work I like tinkering on passion projects, getting lost in books, movies, and games,
+                            and spending time outdoors hiking, camping, and exploring.
                         </p>
-                        <div className="interests">
-                            <i className="fas fa-coffee coffee" aria-hidden />
-                            <i className="fas fa-tv tv" aria-hidden />
-                            <i className="fas fa-gamepad gamepad" aria-hidden />
-                            <i className="fas fa-book book" aria-hidden />
-                        </div>
+                        <p>
+                            I always love to hear what people are building - if you have an idea or a product in mind, get in touch and let's explore how I can help.
+                        </p>
                     </div>
                 </div>
             </div>

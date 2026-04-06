@@ -233,17 +233,25 @@ textarea {
 
         .aboutContainer {
             display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            /* Tight gap: image column is content-sized so it doesn't leave a half-row of empty space */
+            gap: clamp(16px, 2.5vw, 32px);
 
             .imageWrapper {
                 display: flex;
                 flex-direction: column;
-                width: 20%;
-                margin-right: 50px;
+                align-items: center;
+                align-self: flex-start;
+                flex: 0 0 auto;
+                width: min(100%, 320px);
 
                 .aboutProfilePic {
                     border-radius: 20px;
+                    width: 100%;
+                    max-width: 320px;
                     max-height: 250px;
-                    padding-top: 15px;
+                    margin-top: 0;
                     margin-bottom: 20px;
                     object-fit: cover;
                 }
@@ -260,15 +268,19 @@ textarea {
 
             .aboutMeParagraph {
                 display: flex;
-                padding: 10px;
+                flex: 1 1 0;
+                min-width: 0;
+                align-self: flex-start;
+                /* Top aligns with image; inner div supplies padding so text isn't flush to the card edge */
+                padding: 0 10px 10px 10px;
 
                 div:first-of-type {
                     display: flex;
                     flex-direction: column;
-                    width: 50%;
+                    width: 100%;
                     padding: 15px;
 
-                    p:first-of-type {
+                    p {
                         margin-bottom: 10px;
                     }
                 }
